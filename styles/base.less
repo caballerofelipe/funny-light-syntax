@@ -58,7 +58,11 @@ atom-text-editor {
   }
 
   .find-result .region { // FCG
-      background-color: lime;
+      background-color: @syntax-result-marker-color;
+  }
+
+  .current-result .region { // FCG
+      background-color: lighten(@syntax-result-marker-color, 30%);
   }
 }
 
@@ -311,30 +315,6 @@ atom-text-editor {
 
 atom-text-editor[mini] .scroll-view {
   padding-left: 1px;
-}
-
-.scroll-view { // FCG
-    background-image: linear-gradient(to right,
-        // @syntax-gutter-background-color 0,
-        // @syntax-background-color 10%,
-        // @syntax-background-color 90%,
-        // @syntax-gutter-background-color 100%
-
-        // @syntax-gutter-background-color 0,
-        // // @syntax-background-color 30%,
-        // @syntax-background-color 70%,
-        // @syntax-gutter-background-color 100%
-
-        // @syntax-background-color 0,
-        // @syntax-gutter-background-color 30%,
-        // @syntax-gutter-background-color 70%,
-        // @syntax-background-color 100%
-
-        // @syntax-background-color 0,
-        // @syntax-background-color 60%,
-        // @syntax-gutter-background-color 95%,
-        // // @syntax-background-color 100%
-    );
 }
 
 .lines { // FCG
