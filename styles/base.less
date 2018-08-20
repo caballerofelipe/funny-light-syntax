@@ -17,7 +17,13 @@ atom-text-editor {
   }
 
   .gutter {
-    background-color: @syntax-gutter-background-color;
+    // background-color: @syntax-gutter-background-color;
+    background-image: linear-gradient(to right,
+        @syntax-gutter-background-color 0,
+        @syntax-background-color 30%,
+        @syntax-background-color 70%,
+        @syntax-gutter-background-color 100%
+    );
     color: @syntax-gutter-text-color;
 
     .line-number {
@@ -44,10 +50,15 @@ atom-text-editor {
 
   .cursor {
     color: @syntax-cursor-color;
+    border-left: 2px solid;
   }
 
   .selection .region {
     background-color: @syntax-selection-color;
+  }
+
+  .find-result .region { // FCG
+      background-color: lime;
   }
 }
 
@@ -59,14 +70,15 @@ atom-text-editor {
 }
 
 .syntax--keyword {
-  color: @purple;
+  color: @cyan;
 
   &.syntax--control {
-    color: @purple;
   }
 
   &.syntax--operator {
-    color: @syntax-text-color;
+    // color: @syntax-text-color;
+    color: @light-orange;
+    font-weight: bold;
   }
 
   &.syntax--other.syntax--special-method {
@@ -79,18 +91,18 @@ atom-text-editor {
 }
 
 .syntax--storage {
-  color: @purple;
+  color: @cyan;
 }
 
 .syntax--constant {
-  color: @orange;
+  color: @cyan;
 
   &.syntax--character.syntax--escape {
     color: @cyan;
   }
 
   &.syntax--numeric {
-    color: @orange;
+    color: @fuchsia;
   }
 
   &.syntax--other.syntax--color {
@@ -103,7 +115,7 @@ atom-text-editor {
 }
 
 .syntax--variable {
-  color: @red;
+  color: @fuchsia;
 
   &.syntax--interpolation {
     color: darken(@red, 10%);
@@ -146,7 +158,7 @@ atom-text-editor {
     &.syntax--variable,
     &.syntax--parameters,
     &.syntax--array {
-      color: @syntax-text-color;
+      color: @fuchsia;
     }
 
     &.syntax--heading,
@@ -166,14 +178,14 @@ atom-text-editor {
   }
 
   &.syntax--section.syntax--embedded {
-    color: darken(@red, 10%);
+    color: @syntax-text-color;
   }
 
 }
 
 .syntax--support {
   &.syntax--class {
-    color: @light-orange;
+    color: @purple;
   }
 
   &.syntax--function  {
@@ -191,7 +203,7 @@ atom-text-editor {
   }
   &.syntax--name.syntax--type {
     color: @light-orange;
-    text-decoration: underline;
+    // text-decoration: underline;
   }
 
   &.syntax--other.syntax--inherited-class {
@@ -206,12 +218,13 @@ atom-text-editor {
   }
 
   &.syntax--name.syntax--tag {
-    color: @red;
-    text-decoration: underline;
+    color: @pink;
+    // text-decoration: underline;
+    font-weight: bold;
   }
 
   &.syntax--other.syntax--attribute-name {
-    color: @orange;
+    color: @light-pink;
 
     &.syntax--id {
       color: @blue;
@@ -298,4 +311,32 @@ atom-text-editor {
 
 atom-text-editor[mini] .scroll-view {
   padding-left: 1px;
+}
+
+.scroll-view { // FCG
+    background-image: linear-gradient(to right,
+        // @syntax-gutter-background-color 0,
+        // @syntax-background-color 10%,
+        // @syntax-background-color 90%,
+        // @syntax-gutter-background-color 100%
+
+        // @syntax-gutter-background-color 0,
+        // // @syntax-background-color 30%,
+        // @syntax-background-color 70%,
+        // @syntax-gutter-background-color 100%
+
+        // @syntax-background-color 0,
+        // @syntax-gutter-background-color 30%,
+        // @syntax-gutter-background-color 70%,
+        // @syntax-background-color 100%
+
+        // @syntax-background-color 0,
+        // @syntax-background-color 60%,
+        // @syntax-gutter-background-color 95%,
+        // // @syntax-background-color 100%
+    );
+}
+
+.lines { // FCG
+        padding-left: 6px;
 }

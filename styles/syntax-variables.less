@@ -4,25 +4,26 @@
 // include a syntax-variables.less file.
 
 // General colors
-@syntax-text-color: @very-light-gray;
-@syntax-cursor-color: white;
-@syntax-selection-color: lighten(@dark-gray, 10%);
-@syntax-background-color: @very-dark-gray;
+@syntax-text-color: #333;
+@syntax-cursor-color: #333;
+@syntax-selection-color: darken(white, 7%);
+@syntax-background-color: white;
 
 // Guide colors
-@syntax-wrap-guide-color: @dark-gray;
-@syntax-indent-guide-color: @gray;
-@syntax-invisible-character-color: @gray;
+@syntax-wrap-guide-color: #333;
+@syntax-indent-guide-color: #bbb;
+@syntax-invisible-character-color: #eee;
 
 // For find and replace markers
-@syntax-result-marker-color: @light-gray;
-@syntax-result-marker-color-selected: white;
+@syntax-result-marker-color: lime;
+@syntax-result-marker-color-selected: hotpink;
 
 // Gutter colors
-@syntax-gutter-text-color: @very-light-gray;
-@syntax-gutter-text-color-selected: @syntax-gutter-text-color;
-@syntax-gutter-background-color: @dark-gray;
-@syntax-gutter-background-color-selected: @gray;
+@syntax-gutter-text-color: #111;
+// @syntax-gutter-background-color: whitesmoke;
+@syntax-gutter-background-color: #eee;
+@syntax-gutter-text-color-selected: white;
+@syntax-gutter-background-color-selected: #555;
 
 // For git diff info. i.e. in the gutter
 @syntax-color-renamed: @blue;
