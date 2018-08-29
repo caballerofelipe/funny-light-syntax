@@ -20,8 +20,8 @@ atom-text-editor {
     // background-color: @syntax-gutter-background-color;
     background-image: linear-gradient(to right,
         @syntax-gutter-background-color 0,
-        @syntax-background-color 30%,
-        @syntax-background-color 70%,
+        @syntax-background-color 20%,
+        @syntax-background-color 80%,
         @syntax-gutter-background-color 100%
     );
     color: @syntax-gutter-text-color;
@@ -35,6 +35,10 @@ atom-text-editor {
       &.cursor-line-no-selection {
         color: @syntax-gutter-text-color-selected;
       }
+    }
+
+    &[gutter-name=diagnostics-gutter], &[gutter-name=debugger-breakpoint] { // FCG
+        background: @syntax-gutter-background-color;
     }
   }
 
